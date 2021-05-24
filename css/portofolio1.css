@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img[alt="www.000webhost.com"] {
+    display: none;
+}
+
+:root {
+    --bg0: #1E1F41;
+    --bg1: #131433;
+    --bg2: #100F2E;
+    --bg3: #0A0919;
+    --color1: #F5AF33;
+    --color2: #FFB800;
+    --color3: #dda200;
+    --text1: #F7F7F7;
+    --text2: #D8D7D7;
+    --text3: #AEAEAF;
+    --text4: #555555;
+    
+}
+
+
+/* -------------------------------------------- ALL -------------------------------------------- */
+
+
+.btn-1 {
+    border: none;
+    width: 110px;
+    height: 36px;
+    font-size: 12px;
+    color: var(--text1);
+    border-radius: 100px;
+    background-color: var(--color2);
+}
+
+.btn-1:hover {
+    transition: 0.5s;
+    color: var(--color2);
+    background-color: transparent;
+    border: solid var(--color2) 1px;
+}
+
+.btn-1:focus {
+    color: var(--color2);
+    background-color: transparent;
+    border: solid var(--color2) 1px;
+}
+
+.btn-2 {
+    width: 150px;
+    height: 36px;
+    font-size: 12px;
+    border-radius: 100px;
+    color: var(--color2);
+    background-color: transparent;
+    border: solid var(--color2) 1px;
+}
+
+.btn-2:hover {
+    transition: 0.5s;
+    color: var(--text1);
+    background-color: var(--color2);
+}
+
+.j-1 {
+    font-weight: 700;
+    color: var(--text1);
+}
+
+.j-2 {
+    font-weight: 700;
+    color: var(--color3);
+}
+
+.p-1 {
+    color: var(--color3);
+}
+
+
+/* -------------------------------------------- HEADER -------------------------------------------- */
+
+
+header {
+    top: 0;
+    z-index: 1;
+    position: sticky;
+    box-shadow: #1E1F41 2px 0px 6px;
+}
+
+header .head {
+    width: 100%;
+    height: 30px;
+    background-color: var(--bg1);
+}
+
+.head .container ul li {
+    display: inline-table;
+    list-style: none;
+    font-size: 12px;
+}
+
+.head ul li i {
+    padding: 0px 10px;
+}
+
+.head .container ul li a,p,i {
+    color: #F3FAF9;
+    text-decoration: none;
+}
+
+.head .container ul li a:hover,i:hover {
+    cursor: pointer;
+    color: var(--text3);
+}
+
+
+/* -------------------------------------------- NAVBAR -------------------------------------------- */
+
+
+nav {
+    height: 70px;
+    padding: 20px 0px;
+    align-items: center;
+    background-color: var(--bg2);
+}
+
+nav .logo img {
+    width: 36px;
+    float: left;
+    margin-right: 6px;
+}
+
+nav .logo p {
+    float: left;
+    font-size: 24px;
+}
+
+nav .container ul {
+    float: right;
+}
+
+nav .container ul li {
+    list-style: none;
+    display: inline;
+    margin: 0px 15px;
+    font-size: 15px;
+}
+
+nav .container ul li a {
+    color: var(--text2);
+    font-weight: 500;
+}
+
+nav ul li a:hover{
+    transition: 0.5s;
+    color: var(--color2);
+    text-decoration: none;
+}
+
+.show-menu-btn,.hide-menu-btn {
+    display: none;
+    transition: 0.5s;
+    color: var(--text2);
+}
+
+.show-menu-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: -12px;
+}
+
+nav .show-menu-btn:hover,.hide-menu-btn:hover {
+    color: var(--color2);
+}
+
+nav #chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+@media screen and (max-width: 992px) {
+    .show-menu-btn,.hide-menu-btn {
+        display: block;
+        padding: 12px;
+    }
+
+    .menu {
+        top: 0px;
+        width: 100%;
+        right: -200%;
+        height: 600px;
+        position: fixed;
+        transition: 0.5s;
+        padding: 40px 0px;
+        background-color: var(--bg3);
+        box-shadow: #1E1F41 2px 0px 6px;
+    }
+
+    .menu li a{
+        display: block;
+        margin-top: 32px;
+        text-align: center;
+    }
+
+    .menu .hide-menu-btn {
+        top: 40px;
+        right: 40px;
+        font-size: 24px;
+        position: absolute;
+    }
+
+    #chk:checked ~ .menu {
+        right: 0px;
+    }
+}
+
+
+/* -------------------------------------------- JUMBOTRON -------------------------------------------- */
+
+
+.jumbotron {
+    margin: 0px;
+    border-radius: 0px;
+    background-color: var(--bg3);
+}
+
+.jumbotron .deskripsi {
+    padding-top: 52px;
+    padding-bottom: 52px;
+}
+
+.jumbotron .deskripsi h5 {
+    color: var(--text2);
+    font-weight: normal;
+}
+
+.jumbotron .deskripsi .nama {
+    font-size: 70px;
+    font-weight: bold;
+    color: var(--text1);
+}
+
+.jumbotron .deskripsi p {
+    color: var(--text3);
+}
+
+.jumbotron .deskripsi .button {
+    margin: 40px 0px;
+}
+
+.jumbotron .gambar {
+    width: 100%;
+    padding: 0px 5%;
+    object-position: center;
+}
+
+.jumbotron .gambar img {
+    width: 400px;
+}
+
+@media screen and (max-width: 600px) {
+    .jumbotron .gambar img {
+        width: 300px;
+    }
+}
+
+
+/* -------------------------------------------- ABOUT ME -------------------------------------------- */
+
+
+.about {
+    padding: 52px 0px;
+    background-color: var(--bg2);
+}
+
+.about img {
+    width: 400px;
+    margin: 0px 5%;
+}
+
+.about .about-p1,.about-p2 {
+    color: var(--text3);
+}
+
+.about #about-chk {
+    display: none;
+}
+
+.about .about-p2 {
+    display: none;
+}
+
+.about .more {
+    width: 150px;
+    height: 36px;
+    font-size: 12px;
+    padding: 8px 0px;
+    transition: 0.5s;
+    text-align: center;
+    border-radius: 100px;
+    color: var(--color2);
+    border: solid var(--color2) 1px;
+}
+
+.about .more:hover {
+    cursor: pointer;
+    color: var(--text1);
+    background-color: var(--color2);
+    border: solid var(--color2) 1px;
+}
+
+.about #about-chk:checked + .about-p2 {
+    display: block;
+}
+
+.about #about-chk:checked ~ label .more {
+    color: var(--text1);
+    background-color: var(--color2);
+    border: solid var(--color2) 1px;
+}
+
+@media screen and (max-width: 768px) {
+    .about img {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about img {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* -------------------------------------------- SKILL -------------------------------------------- */
+
+
+.skill {
+    padding: 52px 0px;
+    background-color: var(--bg1);
+}
+
+.skill .cards-skill {
+    padding: 52px 0px;
+    justify-content: center;
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: auto auto auto auto auto;
+
+}
+
+.skill .cards-skill .kartu-skill {
+    width: 100%;
+    max-width: 130px;
+    overflow: hidden;
+}
+
+.skill .cards-skill .kartu-skill p {
+    font-size: 24px;
+    margin-top: 28px;
+    text-align: center;
+    color: var(--text1);
+}
+
+.skill .p-2 {
+    text-align: center;
+    color: var(--text1);
+}
+
+.skill .p-2 span {
+    color: var(--color3);
+}
+
+@media screen and (max-width: 992px) {
+    .skill .cards-skill {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skill .cards-skill {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .skill .cards-skill {
+        grid-template-columns: auto;
+    }
+}
+
+
+/* -------------------------------------------- WORK -------------------------------------------- */
+
+
+.work {
+    padding: 52px 0px;
+    background-color: var(--bg2);
+}
+
+.work .cards-work {
+    justify-content: center;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: auto auto auto;
+}
+
+.work .cards-work .kartu-work {
+    width: 300px;
+    height: 250px;
+    background-color: var(--color1);
+}
+
+.work a {
+    text-decoration: none;
+}
+
+.work a p {
+    font-weight: 500;
+    text-align: center;
+    color: var(--color3);
+}
+
+.work a p:hover {
+    color: var(--text3);
+}
+
+@media screen and (max-width: 992px) {
+    .work .cards-work {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .work .cards-work {
+        grid-template-columns: auto;
+    }
+}
+
+
+/* -------------------------------------------- CONTACT US -------------------------------------------- */
+
+
+.contact {
+    padding: 52px 0px;
+    background-color: var(--bg1);
+}
+
+.contact .address p {
+    font-size: 18px;
+    color: var(--text3);
+}
+
+.contact .form input[type=text],input[type=email],textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    color: var(--text2);
+    background-color: var(--bg0);
+}
+
+.contact .form input[type=text] {
+    height: 48px;
+}
+
+.contact .form input[type=email] {
+    height: 48px;
+}
+
+.contact .form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact .form button {
+    width: 110px;
+    height: 35px;
+    font-size: 12px;
+    color: var(--text3);
+    border-radius: 100px;
+    border: 1px solid var(--text3);
+    background-color: transparent;
+}
+
+.contact .form button:hover {
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    color: var(--text1);
+    background-color: var(--color3);
+}
+
+.contact .form button:active {
+    border: none;
+    color: var(--text1);
+    background-color: var(--color3);
+}
+
+
+/* -------------------------------------------- Footer -------------------------------------------- */
+
+
+footer {
+    padding: 52px 0px;
+    color: var(--text3);
+    background-color: var(--bg3);
+}
+
+footer .footer {
+    display: grid;
+    grid-template-columns: auto 180px;
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+/* .footer .copy {
+    float: left;
+}
+
+.footer .share {
+    float: right;
+} */
+
+.footer .share {
+    height: 25px;
+}
+
+.footer .share li {
+    float: left;
+    list-style: none;
+}
+
+.footer .share li p {
+    margin-right: 36px;
+    margin-bottom: 0px;
+}
+
+.footer .share li i {
+    margin: 0px 8px;
+}
+
+@media screen and (max-width: 768px) {
+    footer .footer {
+        grid-template-columns: auto;
+    }
+}
+
+/* @media screen and (max-width: 768px) {
+    .footer {
+        display: inline-block;
+    }
+
+    .footer .copy {
+        float: left;
+    }
+    
+    .footer .share {
+        float: left;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        display: inline-block;
+    }
+
+    .footer .copy {
+        float: left;
+    }
+    
+    .footer .share {
+        float: left;
+    }
+} */
